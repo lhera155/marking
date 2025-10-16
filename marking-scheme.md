@@ -1,6 +1,6 @@
 # Project Marking Scheme (Fall 2025)
 
-**Student Name:** _________________________
+**Student Name:** Lihini Herath
 
 
 This project is graded using a version of something called **specifications grading**. Your submitted `submission-checklist.md` is the primary document used for marking. Each grade level is obtained by completing a "bundle" of requirements. To earn a grade, you must successfully complete **all specifications** in that grade's bundle as well as all bundles below it.
