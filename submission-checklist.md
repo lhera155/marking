@@ -2,7 +2,7 @@
 
 **Instructions:** Before submitting your project, go through this entire checklist in order. Test each feature and place a check (`x`) in the box only if you can confirm it works exactly as described. Submitting an accurately completed checklist is a part of the project's professionalism requirements.
 
-**Student Name:** _________________________
+**Student Name:** Lihini Herath
 
 ---
 
