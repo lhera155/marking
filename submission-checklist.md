@@ -10,7 +10,7 @@
 
 Any entry marked as **[DEALBREAKER]** must be checked for your Project submission to be marked.
 
-- [ ] I have included a single SQL script in the `/config/initdb` directory that creates all tables necessary for both sites to work properly, populated with at least 100 records each.
+- [x] I have included a single SQL script in the `/config/initdb` directory that creates all tables necessary for both sites to work properly, populated with at least 100 records each.
 
 ### Administrative Portal (PHP)
 
@@ -22,10 +22,10 @@ Any entry marked as **[DEALBREAKER]** must be checked for your Project submissio
 - [x] My site uses the provided Router class for all page requests. **[DEALBREAKER]** 
 - [x] My site uses the provided `DatabaseQueries` class for all database queries, including the ones used for the custom API endpoints. **[DEALBREAKER]** 
 - [x] My code does not use any external PHP libraries. **[DEALBREAKER]** 
-- [ ] All my custom API endpoints follow the `/api/...` format.
-- [ ] All my API endpoints return a content type of `application/json`.
-- [ ] All database queries that use `$_GET` or `$_POST` data use prepared statements.
-- [ ] My administrative portal does not use any JavaScript. **[DEALBREAKER]** 
+- [x] All my custom API endpoints follow the `/api/...` format.
+- [x] All my API endpoints return a content type of `application/json`.
+- [x] All database queries that use `$_GET` or `$_POST` data use prepared statements.
+- [x] My administrative portal does not use any JavaScript. **[DEALBREAKER]** 
 
 ### Public-Facing App (JS)
 
@@ -37,9 +37,9 @@ Any entry marked as **[DEALBREAKER]** must be checked for your Project submissio
 - [x] My code does not use third-party JS libraries (unless I received permission). **[DEALBREAKER]** 
 - [x] My code uses an HTML `<dialog>` element and vanilla JS to implement the login modal. **[DEALBREAKER]**
 - [ ] My Personal Dashboard page passes W3C validation after adding *and* after removing a movie.
-- [ ] I have used event delegation for handling clicks on dynamic elements (e.g., removing a film).
-- [ ] I have used Promise chaining to consume at least one API endpoint.
-- [ ] I have used `async/await` to consume at least one API endpoint.
+- [x] I have used event delegation for handling clicks on dynamic elements (e.g., removing a film).
+- [x] I have used Promise chaining to consume at least one API endpoint.
+- [x] I have used `async/await` to consume at least one API endpoint.
 - [ ] I have implemented caching of watchlist data using Web API's localStorage.
 
 ---
@@ -93,8 +93,8 @@ The bracketed numbers refer to functionalities listed in the Requirements docs. 
 *Before starting, I have opened my browser in **Mobile M mode** (375px wide).*
 
 #### Login Page
-- [ ] When logged out, if I go to `/`, I see an empty login form that lets me request an OTP using either a cell number or email address.[1,2]
-- [ ] When I enter an unknown user's email/phone, a clear error message appears and the modal does not. [4]
+- [x] When logged out, if I go to `/`, I see an empty login form that lets me request an OTP using either a cell number or email address.[1,2]
+- [B] When I enter an unknown user's email/phone, a clear error message appears and the modal does not. [4]
 - [ ] When I enter a known user's email/phone, the OTP modal appears. [3]
 - [ ] I can close the OTP modal without logging in, and it has no negative effect. [3]
 - [ ] If I enter an incorrect OTP in the modal, a clear error message is shown within the modal, and I can try again. [6]
@@ -128,7 +128,7 @@ The bracketed numbers refer to functionalities listed in the Requirements docs. 
 ### Known Bugs
 
 *(Use this space to list any features you know are not working correctly. Honesty is a key part of professionalism.)*
-
+My login form wasn’t working because the JavaScript that’s supposed to handle the form wasn’t running properly. The page kept reloading and adding the form data to the URL instead of sending it via JS. I fixed this by making sure the correct event listener from login.js is attached, so the form no longer reloads the page. Now the JS runs, but the login fetch request fails because the server isn’t routing the /api/login URL to the actual PHP file that processes logins. 
 ________________________________________________________________________________
 ________________________________________________________________________________
 
