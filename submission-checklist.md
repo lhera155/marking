@@ -14,14 +14,14 @@ Any entry marked as **[DEALBREAKER]** must be checked for your Project submissio
 
 ### Administrative Portal (PHP)
 
-- [ ] The digests in my `administrators` table begin with `$2y$15`, proving I've used the bcrypt algorithm with a cost of 15.
-- [ ] My code does not use `mysqli` functions; it exclusively uses PDO. **[DEALBREAKER]** 
-- [ ] My forms do not use any client-side (HTML or JS) validation.
-- [ ] My login code uses the `password_verify()` function. **[DEALBREAKER]** 
-- [ ] My `/admin/customers` and `/admin/listings` pages pass W3C validation with no errors. (Warnings are acceptable.)
-- [ ] My site uses the provided Router class for all page requests. **[DEALBREAKER]** 
-- [ ] My site uses the provided `DatabaseQueries` class for all database queries, including the ones used for the custom API endpoints. **[DEALBREAKER]** 
-- [ ] My code does not use any external PHP libraries. **[DEALBREAKER]** 
+- [x] The digests in my `administrators` table begin with `$2y$15`, proving I've used the bcrypt algorithm with a cost of 15.
+- [x] My code does not use `mysqli` functions; it exclusively uses PDO. **[DEALBREAKER]** 
+- [x] My forms do not use any client-side (HTML or JS) validation.
+- [x] My login code uses the `password_verify()` function. **[DEALBREAKER]** 
+- [x] My `/admin/customers` and `/admin/listings` pages pass W3C validation with no errors. (Warnings are acceptable.)
+- [x] My site uses the provided Router class for all page requests. **[DEALBREAKER]** 
+- [x] My site uses the provided `DatabaseQueries` class for all database queries, including the ones used for the custom API endpoints. **[DEALBREAKER]** 
+- [x] My code does not use any external PHP libraries. **[DEALBREAKER]** 
 - [ ] All my custom API endpoints follow the `/api/...` format.
 - [ ] All my API endpoints return a content type of `application/json`.
 - [ ] All database queries that use `$_GET` or `$_POST` data use prepared statements.
@@ -29,13 +29,13 @@ Any entry marked as **[DEALBREAKER]** must be checked for your Project submissio
 
 ### Public-Facing App (JS)
 
-- [ ] My app is a single page (one PHP view) that uses external JS to modify the DOM. **[DEALBREAKER]** 
-- [ ] All my JavaScript is in external files loaded via `<script type="module">`. **[DEALBREAKER]**
-- [ ] My code does not use `onclick` or other `on...` event attributes in the HTML. **[DEALBREAKER]**
-- [ ] My code does not use the `innerHTML` property. **[DEALBREAKER]**
-- [ ] My code does not use `alert()`.
-- [ ] My code does not use third-party JS libraries (unless I received permission). **[DEALBREAKER]** 
-- [ ] My code uses an HTML `<dialog>` element and vanilla JS to implement the login modal. **[DEALBREAKER]**
+- [x] My app is a single page (one PHP view) that uses external JS to modify the DOM. **[DEALBREAKER]** 
+- [x] All my JavaScript is in external files loaded via `<script type="module">`. **[DEALBREAKER]**
+- [x] My code does not use `onclick` or other `on...` event attributes in the HTML. **[DEALBREAKER]**
+- [x] My code does not use the `innerHTML` property. **[DEALBREAKER]**
+- [x] My code does not use `alert()`.
+- [x] My code does not use third-party JS libraries (unless I received permission). **[DEALBREAKER]** 
+- [x] My code uses an HTML `<dialog>` element and vanilla JS to implement the login modal. **[DEALBREAKER]**
 - [ ] My Personal Dashboard page passes W3C validation after adding *and* after removing a movie.
 - [ ] I have used event delegation for handling clicks on dynamic elements (e.g., removing a film).
 - [ ] I have used Promise chaining to consume at least one API endpoint.
@@ -53,39 +53,39 @@ The bracketed numbers refer to functionalities listed in the Requirements docs. 
 *Before starting, I have opened my browser in **Laptop L mode** (1440px wide).*
 
 #### Login Page
-- [ ] When logged out, trying to access `/admin/dashboard` redirects me to `/admin`. [10]
-- [ ] When logged out, trying to access `/admin/customers` redirects me to `/admin`. [17]
-- [ ] When logged out, trying to access `/admin/listings` redirects me to `/admin`. [26]
-- [ ] When logged out, if I go to `/admin`, I see an empty login form.[1,3]
-- [ ] The login form obfuscates the password. [4]
-- [ ] When I log in with `foo@foo.com` and `comp3512`, I wind up back at the login form with `foo@foo.com` filled in, the password field empty, and a suitably vague notification telling me the login was unsuccessful. [5,6,8]
-- [ ] When I log in with `jpratt@mtroyal.ca` and `foo`, I wind up back at the login form with `jpratt@mtroyal.ca` filled in, the password field empty, and a suitably vague notification telling me the login was unsuccessful. [5,6,8]
-- [ ] When I log in with `jpratt@mtroyal.ca` and `comp3512`, I land on the `/admin/dashboard` page, with the date and time in MST/MDT of my last login clearly visible. [7,8,14]
+- [x] When logged out, trying to access `/admin/dashboard` redirects me to `/admin`. [10]
+- [x] When logged out, trying to access `/admin/customers` redirects me to `/admin`. [17]
+- [x] When logged out, trying to access `/admin/listings` redirects me to `/admin`. [26]
+- [x] When logged out, if I go to `/admin`, I see an empty login form.[1,3]
+- [x] The login form obfuscates the password. [4]
+- [x] When I log in with `foo@foo.com` and `comp3512`, I wind up back at the login form with `foo@foo.com` filled in, the password field empty, and a suitably vague notification telling me the login was unsuccessful. [5,6,8]
+- [x] When I log in with `jpratt@mtroyal.ca` and `foo`, I wind up back at the login form with `jpratt@mtroyal.ca` filled in, the password field empty, and a suitably vague notification telling me the login was unsuccessful. [5,6,8]
+- [x] When I log in with `jpratt@mtroyal.ca` and `comp3512`, I land on the `/admin/dashboard` page, with the date and time in MST/MDT of my last login clearly visible. [7,8,14]
 
 #### Dashboard Page
-- [ ] There is a clear way to log out; doing so takes me back to the Login Page with an empty login form. [11]
-- [ ] There is a clear way to get to the Customer Data Page and it has resource path `/admin/customers`. [12,16]
-- [ ] There is a clear way to get to the Movie Listings Page and it has resource path `/admin/listings`. [13,25]
-- [ ] The dashboard correctly displays all required analytics. [15]
-- [ ] If I leave this page and come back, the date/time of my last login is no longer visible, and I've used cookies to accomplish this. [14]
+- [x] There is a clear way to log out; doing so takes me back to the Login Page with an empty login form. [11]
+- [x] There is a clear way to get to the Customer Data Page and it has resource path `/admin/customers`. [12,16]
+- [x] There is a clear way to get to the Movie Listings Page and it has resource path `/admin/listings`. [13,25]
+- [x] The dashboard correctly displays all required analytics. [15]
+- [x] If I leave this page and come back, the date/time of my last login is no longer visible, and I've used cookies to accomplish this. [14]
 
 #### Customer Data Page
-- [ ] There is a clear way to log out; doing so takes me back to the Login Page with an empty login form. [18]
-- [ ] There is a clear way to get to the Dashboard Page and it has resource path `/admin/dashboard`. [19,9]
-- [ ] There is a clear way to get to the Movie Listings Page and it has resource path `/admin/listings`. [20,25]
-- [ ] I clearly see all required information about every customer. [21]
-- [ ] I can successfully filter customers by their plan type. [22]
-- [ ] I can sort the results by name (ascending and descending) using hyperlinks, and clearly see whether the names are sorted ascending or descending. [23]
-- [ ] I can filter by plan type and then sort the results by name and only see sorted results of that type. [24]
+- [x] There is a clear way to log out; doing so takes me back to the Login Page with an empty login form. [18]
+- [x] There is a clear way to get to the Dashboard Page and it has resource path `/admin/dashboard`. [19,9]
+- [x] There is a clear way to get to the Movie Listings Page and it has resource path `/admin/listings`. [20,25]
+- [x] I clearly see all required information about every customer. [21]
+- [x] I can successfully filter customers by their plan type. [22]
+- [x] I can sort the results by name (ascending and descending) using hyperlinks, and clearly see whether the names are sorted ascending or descending. [23]
+- [x] I can filter by plan type and then sort the results by name and only see sorted results of that type. [24]
 
 #### Movie Listings Page
-- [ ] There is a clear way to log out; doing so takes me back to the Login Page with an empty login form. [27]
-- [ ] There is a clear way to get to the Dashboard Page and it has resource path `/admin/dashboard`. [28,9]
-- [ ] There is a clear way to get to the Customer Data Page and it has resource path `/admin/customers`. [29,16]
-- [ ] I can see a list of theatres grouped by province. [30]
-- [ ] I can click on a theatre and see the names of the 3 (or fewer) movies playing there. [31]
-- [ ] I can successfully add a movie to a theatre. [32]
-- [ ] I can successfully remove a movie from a theatre. [32]
+- [x] There is a clear way to log out; doing so takes me back to the Login Page with an empty login form. [27]
+- [x] There is a clear way to get to the Dashboard Page and it has resource path `/admin/dashboard`. [28,9]
+- [x] There is a clear way to get to the Customer Data Page and it has resource path `/admin/customers`. [29,16]
+- [x] I can see a list of theatres grouped by province. [30]
+- [x] I can click on a theatre and see the names of the 3 (or fewer) movies playing there. [31]
+- [x] I can successfully add a movie to a theatre. [32]
+- [x] I can successfully remove a movie from a theatre. [32]
 
 
 ### Public-Facing App (JS)
